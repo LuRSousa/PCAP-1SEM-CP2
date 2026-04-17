@@ -7,7 +7,7 @@ renda_mes = float(input("Digite sua renda mensal: "))
 valor_empr = float(input("Digite o valor do empréstimo: "))
 parcelas = int(input("Digite a quantidade de parcelas que deseja: "))
 
-#Funções
+#Calculando taxas pelo número de parcelas
 def taxas(parcelas):
     if parcelas<=6:
         return 0.05
@@ -18,6 +18,7 @@ def taxas(parcelas):
     
 valor_taxa = taxas(parcelas)
 
+#Calculando o valor da parcela
 def valor_da_parcela():
     PMT = valor_empr*((valor_taxa*(1+valor_taxa)**parcelas)/((1+valor_taxa)**parcelas-1))
     return PMT
