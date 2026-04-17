@@ -9,13 +9,14 @@ falta_mes = int(input("Digite o total de faltas do funcionário no mês: "))
 recebeu_bonus = input("Digite se o funcionário recebeu bônus de desempenho 's' para Sim ou 'n' para Não:")
 recebeu_bonus = recebeu_bonus.lower()
  
-#Funções
+#Calculando horas extras e descontos com base no salário base e taxa
 def calcular_horas_extras(salario_base, horas):
     return salario_base * 0.015 * horas
  
 def calcular_descontos_faltas(salario_base, faltas):
     return salario_base * 0.02 * faltas
-    
+
+#Calculando o bônus que varia com o cargo
 def calcular_bonus(cargo, recebeu_bonus):
     match cargo:
         case 1:
@@ -29,7 +30,7 @@ def calcular_bonus(cargo, recebeu_bonus):
         case _:
             return 0
 
-#Cálculos            
+#Cálculos          
 horas_extras = calcular_horas_extras(salario_base, horas)
 descontos_faltas = calcular_descontos_faltas(salario_base, falta_mes)
 
