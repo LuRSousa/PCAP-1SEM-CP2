@@ -1,3 +1,5 @@
+#02. Sistema de verificação de triângulo com base nos 3 lados
+
 #Definindo o tamanho dos lados dos triangulos
 ladoA = int(input("Digite o primeiro lado do triângulo: "))
 ladoB = int(input("Digite o segundo lado do triângulo: "))
@@ -13,7 +15,7 @@ if (ladoC > ladoA):
     ladoC = ladoA
     ladoA = aux
 
-#Execução dos calculos
+#Calculando o tipo de triângulo pelo ângulo
 def calcular_angulo(a, b, c):
     if (a >= b + c):
         print("Não forma triângulo.")
@@ -24,7 +26,7 @@ def calcular_angulo(a, b, c):
     elif (a ** 2 < b ** 2 + c ** 2):
         print("Triângulo Acutângulo")
 
-
+#Calculando o tipo de triângulo pelo lado
 def calcular_lados(a, b, c):
     if (a >= b + c):
         print("Não forma triângulo.")
@@ -35,6 +37,6 @@ def calcular_lados(a, b, c):
     else:
         print("Triângulo Escaleno")
 
-#Exibindo dos resultados
+#Mostrando resultados
 calcular_angulo(ladoA, ladoB, ladoC)
 calcular_lados(ladoA, ladoB, ladoC)
